@@ -30,7 +30,7 @@ def lambda_handler(event, context):
 	
     )
     for i in response["VolumeStatuses"]:
-        if i["VolumeStatus"]["Status"] != "ok":
+        if i["VolumeStatus"]["Status"] == "ok":
             VolumeId = (i["VolumeId"])
             AZ =(i["AvailabilityZone"])
             Events= (i["Events"] )
